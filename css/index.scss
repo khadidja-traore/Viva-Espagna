@@ -1,0 +1,174 @@
+
+$main-color: #CD4034;
+$secondary-color: rgb(233, 179, 30);
+$third-color: rgba(233, 179, 30, 0.685);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+.containerPrincipal {
+    display: grid;
+    grid-template-rows: minmax(60px,auto) minmax(70%, 1fr) minmax(80px,auto);
+    min-height: 100%;
+}
+
+// Barre de navigation 
+.containerNav{
+    display: grid;
+    grid-template-columns: 100px auto;
+    height: 60px;
+    background-color: $main-color;
+
+    .divLogo{
+        width: 150px;
+        height: 60px;
+
+        //pour centrer le logo
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #logo{
+            font-family: 'Hammersmith One', sans-serif;
+            font-size: 20px;
+            text-align: center; 
+            text-decoration: none;
+            color: black;
+        }
+        
+    }
+
+    //2eme partie de la barre de navigation 
+    .menu{
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        
+        //pour la fenetre active
+        .active{
+            color: $secondary-color;
+        } 
+
+        //liens vers les autres pages 
+        a{
+            text-decoration: none;
+            color: black;
+            padding: 0 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:hover{
+                color: $secondary-color;
+            }
+
+        }
+    }
+
+}
+
+.hero{
+
+    // width: 100%;
+    // height: 100%;
+    // position: relative;
+    // bottom: 5%;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 25% minmax(fit-content,1fr) 25%; /*25% 80%;*/
+
+    
+
+    .divTitre{
+        background-color: $third-color;
+        width: 100%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .carousel{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 95%;
+        height: 70%;
+        column-gap: 20px;
+        justify-content: space-around;
+        margin: 0 2%;
+
+        a{
+            text-decoration: none;
+            color: black;
+            background-color: $main-color;
+            padding: 1%;
+            margin: 1%;
+        }
+
+        .imgDescription{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            img {
+                margin: 2%;
+                width: 100%;
+                height: 75%;
+            }
+        }
+    }
+
+}
+
+
+.containerFooter{
+    background-color: $main-color;
+    height: 80px;
+    width: 100%;
+    // position: absolute;
+    // bottom: 0;
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+    p{
+        text-align: center;
+    }
+
+    a{
+        text-decoration: none;
+        color: black;
+        
+    }
+    
+
+}
+
+@media screen and (min-width: 300px) and (max-width:1000px) {
+    .hero .carousel{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin: 5% 0;
+    }
+
+    .containerFooter{
+        position: inherit;
+    }
+
+
+}
+
+
+

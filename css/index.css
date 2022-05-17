@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+.containerPrincipal {
+  display: grid;
+  grid-template-rows: minmax(60px, auto) minmax(70%, 1fr) minmax(80px, auto);
+  min-height: 100%;
+}
+
+.containerNav {
+  display: grid;
+  grid-template-columns: 100px auto;
+  height: 60px;
+  background-color: #CD4034;
+}
+.containerNav .divLogo {
+  width: 150px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.containerNav .divLogo #logo {
+  font-family: "Hammersmith One", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+.containerNav .menu {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+.containerNav .menu .active {
+  color: rgb(233, 179, 30);
+}
+.containerNav .menu a {
+  text-decoration: none;
+  color: black;
+  padding: 0 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.containerNav .menu a:hover {
+  color: rgb(233, 179, 30);
+}
+
+.hero {
+  text-align: center;
+  display: grid;
+  grid-template-rows: 25% minmax(-webkit-fit-content, 1fr) 25%;
+  grid-template-rows: 25% minmax(fit-content, 1fr) 25%;
+  /*25% 80%;*/
+}
+.hero .divTitre {
+  background-color: rgba(233, 179, 30, 0.685);
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero .carousel {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 95%;
+  height: 70%;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  justify-content: space-around;
+  margin: 0 2%;
+}
+.hero .carousel a {
+  text-decoration: none;
+  color: black;
+  background-color: #CD4034;
+  padding: 1%;
+  margin: 1%;
+}
+.hero .carousel .imgDescription {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero .carousel .imgDescription img {
+  margin: 2%;
+  width: 100%;
+  height: 75%;
+}
+
+.containerFooter {
+  background-color: #CD4034;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+.containerFooter p {
+  text-align: center;
+}
+.containerFooter a {
+  text-decoration: none;
+  color: black;
+}
+
+@media screen and (min-width: 300px) and (max-width: 1000px) {
+  .hero .carousel {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 5% 0;
+  }
+
+  .containerFooter {
+    position: inherit;
+  }
+}/*# sourceMappingURL=index.css.map */

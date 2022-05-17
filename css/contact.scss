@@ -1,0 +1,48 @@
+$main-color: #CD4034;
+$secondary-color: rgb(233, 179, 30);
+
+body{
+    // background-color: $secondary-color;
+    
+}                         
+
+.containerContact{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    
+    
+    padding: 2%;
+    color: black;
+    div, p{
+        padding: 0 2%;
+    }
+    p{
+        background-color: $main-color;
+        border:10px double black;
+        border-radius: 5%;
+        font-size: 30px;
+        height: 5 0%;
+        width: 70;
+    }
+
+    #infos{
+        text-align: center;
+        margin-bottom: 2%;
+    }
+
+    iframe{
+        
+    }
+
+    #carte{
+
+        // width: 5px;
+        // height: 30%;
+
+    }
+
+}
